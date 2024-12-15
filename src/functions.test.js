@@ -3,6 +3,7 @@ import {
   reverseString,
   Calculator,
   caesarCipher,
+  analyzeArray,
 } from "./functions";
 
 test("capitalizes string passed as an argument", () => {
@@ -25,4 +26,13 @@ test("A caesarCipher function that takes a string and a shift factor and returns
   expect(caesarCipher("yzA", 3)).toBe("bcD");
   expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
+
+test("An analyzeArray function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
